@@ -1,9 +1,9 @@
 .container {
   padding: 1rem;
   border-radius: 1rem;
+  background-color: rgb(233, 233, 233);
 
   figcaption {
-    background-color: rgb(233, 233, 233);
     color: rgb(33, 33, 33);
     font-size: 2rem;
     margin-bottom: 1em;
