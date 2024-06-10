@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import './PokemonCard.modules.css'
 
-const PokemonCard = () => {
-  const pokemonList = [
-    {
-      name: 'bulbasaur',
-      imgSrc:
-        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png',
-    },
-    {
-      name: 'mew',
-    },
-  ]
-  const pokemon = pokemonList[0]
+const pokemonList = [
+  {
+    name: 'bulbasaur',
+    imgSrc:
+      'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png',
+  },
+  {
+    name: 'mew',
+  },
+]
+const pokemon = pokemonList[0]
 
+const PokemonCard = () => {
   return (
     <figure className="container">
       {pokemon.imgSrc ? (
