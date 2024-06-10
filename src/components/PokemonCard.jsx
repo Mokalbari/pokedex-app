@@ -11,9 +11,9 @@ const pokemonList = [
     name: 'mew',
   },
 ]
-const pokemon = pokemonList[0]
 
 const PokemonCard = () => {
+  const pokemon = pokemonList[0]
   return (
     <figure className="container">
       {pokemon.imgSrc ? (
