@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './PokemonCard.modules.css'
+import PropTypes from 'prop-types'
 
 const PokemonCard = ({ pokemon }) => {
   return (
@@ -15,6 +16,13 @@ const PokemonCard = ({ pokemon }) => {
       </figcaption>
     </figure>
   )
+}
+
+PokemonCard.propTypes = {
+  pokemon: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    imgSrc: PropTypes.string,
+  }),
 }
 
 export default PokemonCard
