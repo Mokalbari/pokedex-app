@@ -42,12 +42,14 @@ function App() {
     <>
       <PokemonCard pokemon={pokemonList[pokemonIndex]} />
       {pokemonIndex > 0 && (
-        <button id="previous" onClick={handleClick}>
+        <button type="button" id="previous" onClick={handleClick}>
           Précédent
         </button>
       )}
       {pokemonIndex < pokemonList.length - 1 && (
-        <button onClick={handleClick}>Suivant</button>
+        <button type="button" onClick={handleClick}>
+          Suivant
+        </button>
       )}
     </>
   )
