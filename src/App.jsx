@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import PokemonCard from './components/PokemonCard'
 import Navbar from './components/Navbar'
 
 function App() {
+  useEffect(() => alert('Hello pokemon trainer ! :)'), [])
   const [pokemonIndex, setPokemonIndex] = useState(0)
+
   const pokemonList = [
     {
       name: 'bulbasaur',
