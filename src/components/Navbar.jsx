@@ -1,24 +1,18 @@
 const Navbar = ({ setPokemonIndex, pokemonIndex, pokemonList }) => {
-  const handleClick = event => {
-    if (event.target.id === 'previous') {
-      setPokemonIndex(pokemonIndex - 1)
-    } else {
-      setPokemonIndex(pokemonIndex + 1)
-    }
-  }
-
+  //   const handleClick = event => {
+  //     setPokemonIndex(event)
+  //   }
   return (
     <div>
-      {pokemonIndex > 0 && (
-        <button type="button" id="previous" onClick={handleClick}>
-          Précédent
+      {pokemonList.map((pokemon, index) => (
+        <button
+          type="button"
+          key={pokemon.name}
+          onClick={() => setPokemonIndex(index)}
+        >
+          {pokemon.name}
         </button>
-      )}
-      {pokemonIndex < pokemonList.length - 1 && (
-        <button type="button" onClick={handleClick}>
-          Suivant
-        </button>
-      )}
+      ))}
     </div>
   )
 }
